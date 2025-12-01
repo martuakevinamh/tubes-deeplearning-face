@@ -5,12 +5,23 @@ Program Studi Teknik Informatika - Institut Teknologi Sumatera (2025)
 
 ---
 
-## 👥 Tim Pengembang (DeepVision Squad)
+## 📢 Presentasi Proyek
+
+![Face Recognition Presentasi](assets/PosterDL.png)
+
+### 🌐 Demo & Resources
+
+- 🚀 **Live Demo**: [Coba Aplikasi Sekarang](https://tubes-deeplearning-face-marafa.streamlit.app/)
+- 🤗 **Model Repository**: [Hugging Face Hub](https://huggingface.co/Martua/tubes-deeplearning/tree/main)
+
+---
+
+## 👥 Tim Pengembang (MaRaFa)
 
 | NIM | Nama | Peran |
 |-----|------|-------|
 | 122140119 | Martua Kevin A.M.H. Lubis | AI Engineer & Model Training |
-| 122140| Rayhan Irwanto | Researcher & Data Analyst |
+| 122140236| Rayhan Irwanto | Data Analyst |
 | 122140205| Muhammad Fadil Ataullah Rifqi | Application Developer (Streamlit) |
 
 ---
@@ -87,8 +98,8 @@ Aplikasi dibangun dengan **Streamlit** dan menyediakan:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/martuakevin/tubes-deep-learning-face.git
-cd tubes-deep-learning-face
+git clone https://github.com/martuakevin/tubes-deeplearning-face.git
+cd tubes-deeplearning-face
 ```
 
 ### 2. Install Dependencies
@@ -102,7 +113,7 @@ pip install -r requirements.txt
 ### 3. Jalankan Aplikasi
 
 ```bash
-python -m streamlit run app.py
+python -m streamlit run appfinal.py
 ```
 
 ---
@@ -111,12 +122,27 @@ python -m streamlit run app.py
 
 ```
 tubes-deep-learning-face/
-├── app.py                  # Main Application Code
-├── requirements.txt        # List Library Python
-├── face_svm_augmented.pth  # Model Otak (Didownload otomatis)
-├── README.md               # Dokumentasi Proyek
-└── ...
+├── 📁 models/
+│   ├── face_svm_augmented.pth      # Model SVM (Didownload otomatis)
+│   ├── face_vit_svm_augmented.pth  # Model ViT alternatif
+│   └── labels_augmented.txt        # Label kelas untuk prediksi
+├── 📁 notebooks/
+│   └── Final_Tubes.ipynb           # Jupyter Notebook eksperimen & training
+├── appfinal.py                     # Main Application Code (Streamlit)
+├── requirements.txt                # List Library Python
+├── README.md                       # Dokumentasi Proyek (file ini)
+└── .gitignore                      # File/folder yang diabaikan Git
 ```
+
+### Penjelasan File Penting:
+
+| File | Fungsi |
+|------|--------|
+| `appfinal.py` | Aplikasi Streamlit utama untuk face recognition |
+| `models/face_svm_augmented.pth` | Model SVM terlatih (94.34% akurasi) |
+| `models/labels_augmented.txt` | Daftar label kelas yang dikenali sistem |
+| `notebooks/Final_Tubes.ipynb` | Notebook lengkap: preprocessing, training, evaluasi |
+| `requirements.txt` | Dependensi Python yang diperlukan |
 
 ---
 
@@ -125,6 +151,7 @@ tubes-deep-learning-face/
 - **Facenet-PyTorch**: Tim Esler (Github)
 - **Dataset**: Koleksi Pribadi Mahasiswa ITERA (Tugas Besar Deep Learning 2025)
 - **Paper Acuan**: [FaceNet: A Unified Embedding for Face Recognition and Clustering](https://arxiv.org/abs/1503.03832) (Schroff et al., 2015)
+- **Model Hosting**: [Hugging Face Model Hub](https://huggingface.co/Martua/tubes-deeplearning/tree/main)
 
 ---
 
